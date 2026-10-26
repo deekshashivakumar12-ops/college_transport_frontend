@@ -1,0 +1,1 @@
+Add your college image in this folder and name it college-photo.jpg. The login background references assets/college-photo.jpg.

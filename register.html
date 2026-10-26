@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Register | CampusTrack</title><link rel="stylesheet" href="style.css"></head>
+<body class="auth-body register-body"><main class="register-card">
+  <a class="brand" href="index.html"><span class="brand-icon">🚌</span><span>Campus<span class="brand-light">Track</span></span></a>
+  <p class="eyebrow">GET STARTED</p><h1>Create your account</h1><p class="muted">Choose a role to show the relevant registration fields.</p>
+  <form id="registerForm" class="stack-form">
+    <label for="regRole">Register as</label><select id="regRole" required><option value="student">Student</option><option value="driver">Driver</option><option value="admin">Administrator</option></select>
+    <div class="form-grid">
+      <div class="field"><label for="regName">Full name</label><input id="regName" required maxlength="80" autocomplete="name"></div>
+      <div class="field"><label for="regEmail">Email address</label><input id="regEmail" type="email" required maxlength="120" autocomplete="email"></div>
+      <div class="field"><label for="regPhone">Phone number</label><input id="regPhone" type="tel" required pattern="[0-9+() -]{8,18}" maxlength="18" placeholder="+91 ..."></div>
+      <div class="field"><label for="regId" id="regIdLabel">Student ID</label><input id="regId" required maxlength="40" placeholder="College ID"></div>
+      <div class="field student-only"><label for="regCourse">Course / class</label><select id="regCourse"><option value="BCA">BCA</option><option value="PUC">PUC</option><option value="School">School</option><option value="Other">Other</option></select></div>
+      <div class="field student-only"><label for="regYear">Year / class</label><select id="regYear"><option>1st Year</option><option>2nd Year</option><option>3rd Year</option></select></div>
+      <div class="field student-only"><label for="regBus">Assigned bus number</label><input id="regBus" maxlength="30" placeholder="Assigned by transport office"></div>
+      <div class="field student-only"><label for="regBoarding">Boarding point</label><input id="regBoarding" maxlength="100"></div>
+      <div class="field driver-only hidden"><label for="regLicense">Driving licence number</label><input id="regLicense" maxlength="50"></div>
+      <div class="field driver-only hidden"><label for="regExpiry">Licence expiry date</label><input id="regExpiry" type="date"></div>
+      <div class="field driver-only hidden"><label for="regAssignedBus">Assigned bus number</label><input id="regAssignedBus" maxlength="30"></div>
+      <div class="field driver-only hidden"><label for="regRoute">Assigned route</label><input id="regRoute" maxlength="100"></div>
+      <div class="field admin-only hidden"><label for="inviteCode">Admin invitation code</label><input id="inviteCode" autocomplete="off" maxlength="80" placeholder="Provided by system owner"></div>
+    </div>
+    <div class="field"><label for="regPhoto">Profile photo (optional)</label><input id="regPhoto" type="file" accept="image/png,image/jpeg,image/webp"><div id="photoPreview" class="photo-preview">Photo preview will appear here</div></div>
+    <div class="form-grid">
+      <div class="field"><label for="regPassword">Password</label><div class="password-wrap"><input id="regPassword" type="password" required minlength="8" autocomplete="new-password"><button type="button" class="reveal" data-toggle="regPassword">Show</button></div></div>
+      <div class="field"><label for="regConfirm">Confirm password</label><div class="password-wrap"><input id="regConfirm" type="password" required minlength="8" autocomplete="new-password"><button type="button" class="reveal" data-toggle="regConfirm">Show</button></div></div>
+    </div>
+    <label class="check-row"><input type="checkbox" id="regTerms" required> I confirm that the information provided is accurate.</label>
+    <button class="btn btn-primary btn-wide" type="submit">Create account →</button><p id="registerMessage" class="form-message" role="status"></p>
+  </form>
+  <p class="auth-foot">Already registered? <a href="index.html">Sign in</a></p>
+  <p class="tiny-note">Registration is stored locally in this frontend package. Connect a backend before using real student or driver data.</p>
+</main><script src="app.js"></script></body></html>

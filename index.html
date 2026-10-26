@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Bus Tracking | Login</title><link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-body">
+  <main class="auth-shell">
+    <section class="auth-visual">
+      <div class="visual-overlay"></div>
+      <div class="visual-copy"><span class="brand-mark">🚌</span><p class="eyebrow">CAMPUS TRANSPORT</p>
+        <h1>Every journey,<br>safer together.</h1><p>Secure college transport information for students, drivers and administrators.</p>
+      </div>
+    </section>
+    <section class="auth-panel">
+      <a class="brand" href="index.html"><span class="brand-icon">🚌</span><span>Campus<span class="brand-light">Track</span></span></a>
+      <p class="eyebrow">WELCOME BACK</p><h2>Sign in to your account</h2><p class="muted">Choose your role and enter your account details.</p>
+      <form id="loginForm" class="stack-form">
+        <label for="loginRole">Account role</label>
+        <select id="loginRole" required><option value="">Select role</option><option value="admin">Administrator</option><option value="student">Student</option><option value="driver">Driver</option></select>
+        <label for="loginEmail">Email or user ID</label><input id="loginEmail" autocomplete="username" required maxlength="120" placeholder="Enter email or ID">
+        <label for="loginPassword">Password</label><div class="password-wrap"><input id="loginPassword" type="password" autocomplete="current-password" required minlength="8" placeholder="Enter password"><button type="button" class="reveal" data-toggle="loginPassword">Show</button></div>
+        <button class="btn btn-primary btn-wide" type="submit">Sign in <span>→</span></button>
+        <p id="loginMessage" class="form-message" role="status"></p>
+      </form>
+      <p class="auth-foot">New to CampusTrack? <a href="register.html">Create an account</a></p>
+      <p class="tiny-note">For production, connect this page to a secure server-side authentication API.</p>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body></html>
